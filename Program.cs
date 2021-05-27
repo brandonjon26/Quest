@@ -43,7 +43,12 @@ namespace Quest
             int maxAwesomeness = 100;
 
             // Make a new "Adventurer" object using the "Adventurer" class
-            Adventurer theAdventurer = new Adventurer("Jack");
+            Console.WriteLine("State your name!");
+            string addName = Console.ReadLine();
+            Console.WriteLine($"Well {addName}, I hope you are up to the task. This quest is a warrior's gambit.");
+            Console.WriteLine("================================================");
+
+            Adventurer theAdventurer = new Adventurer(addName);
 
             // A list of challenges for the Adventurer to complete
             // Note we can use the List class here because have the line "using System.Collections.Generic;" at the top of the file.
