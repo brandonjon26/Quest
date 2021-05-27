@@ -46,9 +46,18 @@ namespace Quest
             Console.WriteLine("State your name!");
             string addName = Console.ReadLine();
             Console.WriteLine($"Well {addName}, I hope you are up to the task. This quest is a warrior's gambit.");
-            Console.WriteLine("================================================");
+            Console.WriteLine("=======================================================");
 
             Adventurer theAdventurer = new Adventurer(addName);
+
+            Robe addRobe = new Robe();
+            while (true)
+            {
+                Console.WriteLine("Choose your robe, warrior.");
+                string RobeColor = Console.ReadLine();
+
+                addRobe.Colors.Add(RobeColor);
+            }
 
             // A list of challenges for the Adventurer to complete
             // Note we can use the List class here because have the line "using System.Collections.Generic;" at the top of the file.
